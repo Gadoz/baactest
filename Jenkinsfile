@@ -29,6 +29,8 @@ pipeline {
                     UAT_HOST = "${KUBE_UAT_HOST}" + "." + "${KUBE_UAT_ZONE}"
                     PROD_HOST = "${KUBE_PROD_HOST}" + "." + "${KUBE_PROD_ZONE}"
 
+                    TEST_PARAM = "${TEST_PARAM}"
+
                     DEV_BRANCH_HOST = "${KUBE_DEV_BRANCH_HOST}" + "." + "${KUBE_DEV_BRANCH_ZONE}"
                     SIT_BRANCH_HOST = "${KUBE_SIT_BRANCH_HOST}" + "." + "${KUBE_SIT_BRANCH_ZONE}"
                     UAT_BRANCH_HOST = "${KUBE_UAT_BRANCH_HOST}" + "." + "${KUBE_UAT_BRANCH_ZONE}"
