@@ -214,17 +214,17 @@ pipeline {
             post {
                 success{
                     echo "Sonar success"
-                    script{
+                    /*script{
                         rocket("developer","${BUILD_URL} SonarQube : Build Succeeded")
                         rocket("it_admin","${BUILD_URL} SonarQube : Build Succeeded")
-                    }
+                    }*/
                 }
                 failure{
                     echo "Sonar failed"
-                    script{
+                    /*script{
                         rocket("developer","${BUILD_URL} SonarQube : Build Failed")
                         rocket("it_admin","${BUILD_URL} SonarQube : Build Failed")
-                    }
+                    }*/
                 }
             }
         }
@@ -468,9 +468,9 @@ def initialRobotFile(fileName,host){
 	}
 }
 
-def rocket(channel,message){
+/*def rocket(channel,message){
     rocketSend channel: "${channel}", message: "${message}", rawMessage: true, serverUrl: "${ROCKET_URL}", trustSSL: true, webhookToken: "${ROCKET_TOKEN}"
-}
+}*/
 
 def notifyEmail(subject,msg,to) {
     emailext body: "${msg}", subject: "${subject}", to: "${to}"
