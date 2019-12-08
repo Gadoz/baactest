@@ -88,6 +88,9 @@ pipeline {
         
         stage('Test') {
             steps {
+                sh "echo ${TEST_PARAM}"
+                
+                
                 sh "go test ./service -v"
                 sh "ls -lt"
             }
